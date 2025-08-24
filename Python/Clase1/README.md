@@ -1,3 +1,9 @@
 # Ejercicios de Python
-Cargar la clase numero 1 de Python
-## Agregado archivo nuevo python TuplasParte1.py
+
+## Clase 1
+Listas.py
+Ejercicios Rango 1,2 y 3.py
+TuplasParte1.py
+TuplasParte2.py
+TuplasEjercicio4.py
+
