@@ -1,4 +1,8 @@
-
+/*
+ * Ejercicio 3: Leer números hasta que se introduzca un cero.
+ * Para cada número, indicar si es par o impar.
+ * Primero con la clase Scanner, luego con la clase JOptionPane. 
+ */
 import javax.swing.JOptionPane;
 
 public class EjercicioCiclos03JOptionPane {
