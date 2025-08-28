@@ -1,6 +1,4 @@
 
-package ejerciciociclos03;
-
 import java.util.Scanner;
 
 public class EjercicioCiclos03Scanner {
