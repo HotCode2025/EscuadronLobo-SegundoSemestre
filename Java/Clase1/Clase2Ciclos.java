@@ -1,5 +1,3 @@
-package semestre2clases;
-
 public class Clase2Ciclos {
     public static void main(String[] args) {
         //CICLO WHILE
