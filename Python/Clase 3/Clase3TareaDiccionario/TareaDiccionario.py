@@ -10,3 +10,4 @@ SeleccionArgentina = {
     9: {'Nombre': 'Julián Alvarez'. 'Edad': 25, 'Altura': 1.70, 'Precio': '100 Millones', 'Posicion': 'Delantero centro'},
     10: {'Nombre': 'Lionel Messi'. 'Edad': 38, 'Altura': 1.70, 'Precio': '18 Millones', 'Posicion': 'Extremo derecho'},
     11: {'Nombre': 'Thiago Almada'. 'Edad': 24, 'Altura': 1.71, 'Precio': '25 Millones', 'Posicion': 'Mediocentro ofensivo'},
+}
