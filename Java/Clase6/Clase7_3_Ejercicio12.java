@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class ejercicio12 {
+public class Clase7_3_Ejercicio12 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         long factorial = 1;

@@ -1,11 +1,8 @@
 /*Ejercicio 10:  Pedir 10 numeros y escribir la suma total
 Clase Scanner
 */
-package EscuadronLobo-SegundoSemestre ;
-
 import java.util.Scanner;
-
-public class Clase_6_8_Ejercicio10_ClaseJOptionPane {
+public class Clase_6_8_Ejercicio10_ClaseScanner {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int suma = 0;
