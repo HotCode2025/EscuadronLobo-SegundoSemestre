@@ -1,17 +1,24 @@
-// Clase Producto
-class Producto {
-    static contadorProductos = 0;
+//CLASE 10 Proyecto Ventas
 
+//----------------------------
+//Clase Producto
+//----------------------------
+class Producto {
+    //Atributos estáticos: Cuenta cuantos productos se han creado en total
+    static contadorProductos = 0;
+//Constructor: se ejecuta cada vez que se crea un nuevo producto
     constructor(nombre, precio) {
+        //Se incrementa el contador y se asigna in ID único al producto
         this._idProducto = ++Producto.contadorProductos;
         this._nombre = nombre;
         this._precio = precio;
     }
-
+     //Getter: permite acceder al ID de forma segura
     get idProducto() {
         return this._idProducto;
     }
-
+    //Getter y Setters para nombre y precio
+    //Permiten leer y modificar los atributos privados (_nombre, _precio)
     get nombre() {
         return this._nombre;
     }
@@ -27,54 +34,69 @@ class Producto {
     set precio(precio) {
         this._precio = precio;
     }
-
+    //Método para devolver el producto en formato de texto
     toString() {
-        return `${this._idProducto} ${this._nombre} ${this._precio}`;
+        return `${this._idProducto} ${this._nombre} ${this._precio}`;//Usamos Template Literals
+                                                                  //Nos permite usar código dinamico
     }
-}
+}//Fin de la clase producto
 
+//----------------------------
 // Clase Orden
-class Orden {
+//----------------------------
+
+class Orden {//Relacion de agregación
+    //Atributo estático: cuenta cuántas órdenes se han creado
     static contadorOrdenes = 0;
-    static get MAX_PRODUCTOS() {
+    //Getter estático: define el máximo de productos por orden (constantes)
+    static get MAX_PRODUCTOS() {//ID único por orden
         return 5; // constante definida en la clase
     }
 
     constructor() {
         this._idOrden = ++Orden.contadorOrdenes;
-        this._productos = [];
+        this._productos = [];//Lista(array) para guardar productos
     }
 
     get idOrden() {
         return this._idOrden;
     }
 
+    //Método para agregar producto a la orden
     agregarProducto(producto) {
+        //Solo se agrega productos sino se supera el límite
         if (this._productos.length < Orden.MAX_PRODUCTOS) {
-            this._productos.push(producto);
+            this._productos.push(producto);//Tenemos 2 tipo de sintáxis: 1
+            //this._productos[this._contadorProductosAgregados++] = producto; // 2da sintáxix
         } else {
             console.log("No se pueden agregar más productos a la orden.");
-        }
-    }
+        }//Fin del método agregarProductos
+    }//Fin de la clase orden
 
+    //Calcula el total de la orden sumando los precios de los productos
     calcularTotal() {
         let total = 0;
         for (let producto of this._productos) {
             total += producto.precio;
         }
         return total;
-    }
+}//Fin del método calcularTotal
 
+    //Muestra la información completa de la orden
     mostrarOrden() {
         let productosOrden = '';
         for (let producto of this._productos) {
             productosOrden += '\n   ' + producto.toString();
-        }
+        }//Fin del ciclo for
         return `${this._idOrden} ${this.calcularTotal()} ${productosOrden}`;
-    }
-}
+    }//Fin del método mostrarOrden
+}//Fin de la clase orden
 
-//VentasTest
+//----------------------------------
+//Ejecución de prueba (VentasTest)
+//-----------------------------------
+
+//Se crean varios productos
 let producto1 = new Producto("Gabinete", 800);
 let producto2 = new Producto("Monitor", 400);
 let producto3 = new Producto("Combo-Gamming", 250);
@@ -82,6 +104,7 @@ let producto4 = new Producto("Teclado", 150);
 let producto5 = new Producto("Mouse", 100);
 let producto6 = new Producto("Auriculares", 200);
 
+//Se crean órdenes y se agregan productos
 let orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
