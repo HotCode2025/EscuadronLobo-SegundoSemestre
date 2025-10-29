@@ -1,0 +1,16 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>330</x><y>130</y><w>200</w><h>100</h></coordinates><panel_attributes>&lt;&lt;FiguraGeometrica&gt;&gt;
+--
+-alto
+-ancho
+--
++area() &lt;&lt;abstract&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>390</y><w>200</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Cuadrado&gt;&gt;
+--
++area() &lt;&lt;implementacion&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>400</y><w>200</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Rectangulo&gt;&gt;
+--
++area() &lt;&lt;implementacion&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>220</y><w>350</w><h>200</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;10;330;180</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>200</y><w>140</w><h>220</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>110;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>220</y><w>90</w><h>190</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>20;10;10;170</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>200</y><w>460</w><h>200</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>440;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>110</y><w>130</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Color&gt;&gt;
+--
++color</panel_attributes><additional_attributes></additional_attributes></element></diagram>
