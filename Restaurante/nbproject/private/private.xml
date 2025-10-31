@@ -7,5 +7,24 @@
             <file>file:/C:/Users/Lucas/Documents/NetBeansProjects/Restaurante/src/domain/modulo/Pedido.java</file>
             <file>file:/C:/Users/Lucas/Documents/NetBeansProjects/Restaurante/src/domain/modulo/GestionPedidos.java</file>
         </group>
+        <group name="JAVA">
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/test/RestauranteApp.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/menus/MenuAdministrador.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/menus/MenuCajero.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Factura.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionFacturacion.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionInventario.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionMenu.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionMesa.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionPedidos.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionUsuario.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Insumo.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/GestionVentas.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Mesa.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Pedido.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Plato.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/PrecargaDatos.java</file>
+            <file>file:/C:/Users/Dario/TUP/EscuadronLobo-SegundoSemestre/Restaurante/src/domain/modulo/Venta.java</file>
+        </group>
     </open-files>
 </project-private>
