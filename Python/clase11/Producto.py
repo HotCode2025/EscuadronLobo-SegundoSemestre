@@ -1,35 +1,35 @@
+# Clase 11: 15.1 Creamos la clase Producto: En carpeta Lección11
 class Producto:
-    CONTADOR_P = 0
+    contador_productos = 0;  #variable de clase
 
-    def __init__(self, Nombre, Precio):
-        Producto.CONTADOR_P += 1
-        self._Id = Producto.CONTADOR_P
-        self._Nombre = Nombre
-        self._Precio = Precio
+    def __init__(self, nombre, precio):
+        Producto.contador_productos +=1  #aumento para la variable de clase
+        self._id_producto = Producto.contador_productos  #asignacion desde la variable de clase
+        self._nombre = nombre
+        self._precio = precio
 
-    #metodos setter y getter
     @property
     def nombre(self):
-        return self._Nombre
+        return self._nombre
+    
     @nombre.setter
-    def nombre(self, Nombre):
-        self._Nombre = Nombre
+    def nombre(self, nombre):
+        self._nombre = nombre
 
-    #metodos setter y getter
     @property
     def precio(self):
-         return self._Precio
+        return self._precio
+    
     @precio.setter
-    def precio(self, Precio):
-        self._Precio = Precio
+    def precio(self, precio):
+        self._precio = precio
 
+    #Sobre escribimos el metodo str
     def __str__(self):
-        return f"ID: {self._Id}, nombre: {self._Nombre}, precio: {self._Precio}"
+        return f'Id Producto: {self._id_producto}, Nombre: {self._nombre}, Precio: {self._precio}'
 
+if __name__ == '__main__':  ## solo sera visible si la prueba se ejecuta desde aqui
+    producto1 = Producto('Camiseta', 100.00)
+    producto2 = Producto('Pantalon', 150.00)
+        
 
-#pruebas
-if __name__ == "__main__":
-    torta = Producto("Torta", 40000)
-    pescado = Producto("Pescado", 10000)
-    print(torta.__str__())
-    print(pescado.__str__())
