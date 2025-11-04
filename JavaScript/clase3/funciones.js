@@ -1,72 +1,101 @@
-//funciones
-function suma(a,b){
-    console.log(a+ b);
+// Clase 3 Funciones//
+
+// 1.1 Introducción a Funciones
+/*
+miFuncion(8,2); //esto se le conoce como hosting
+
+function miFuncion(a, b){
+    console.log("Sumamos: "+ (a + b));
 }
-console.log(suma(1,2));
 
-//palabra return
-function resta(a,b){
-    return a-b;//esta palabra reservada devuele el resultado
+// Llamando a la funcion
+miFuncion(5,4);
+*/
+// 1.2 Palabra return
+
+miFuncion(8,2); //esto se le conoce como hosting
+
+function miFuncion(a, b){
+    return a + b;
 }
-console.log(resta(1,2));
 
-//funcion de tipo expreciopn o aninima
-let x = function(a,b){
-    return a / b;
-}
-console.log(x(10,2));
+// Llamando a la funcion
+miFuncion(5,4);
 
-//funiones tipo self y invoking / funciones que se invocan a si misma
-(function(a,b){
-    console.log("la funcion se esta ejecutando");
-    return a * b;
-}(9,2))
+let resultado = miFuncion(6,7);
+console.log(resultado)
 
-//tipos de datos en una funcion
-console.log(typeof x);
- //como saber cunatos argumentos tiene una funcion
- function mate(a,b){
+// 1.3 Funciones de tipo expresión
+
+// Declaramos una funcion de tipo expresion o anonima
+let x = function(a, b){ return a + b};
+resultado = x (5, 6);  //al llamarla se pone la variable y parentesis
+//console.log(resultado)
+
+// 1.4 Funciones de tipo self y invoking
+
+(function(a, b){
+    console.log('Ejecutando la funcion: '+ (a+b));
+})(9,6);
+
+// 1.5 Tipos de datos en una función
+
+console.log(typeof miFuncion); 
+function miFuncionDos(a, b){
     console.log(arguments.length);
- }
- console.log(mate(7,45,5,6));
+}
 
- //tostring
- let miFuncion = x.toString;
- console.log(miFuncion);
+miFuncionDos(5,7,3,6);
 
- //funcioens flecha(mas recomendado)
- //argumentos y parametros
- let hola = ()=>{ // alas fucniones se le pasan parametros en los () para trabajar
-    return "hola";
- }
- console.log(hola());//al llamar a las funciones se debe completar con argumentos en los ()
+//toString
+var miFuncionTexto = miFuncionDos.toString();
+console.log(miFuncionTexto);
 
-//concepto hoisting
-let sumarTodo = sumatodo(1,2,3,4);
-console.log(sumarTodo);
+// 1.6  Funciones flecha
+const sumarFuncionFlecha = (a,b) => a + b;
+resultado = sumarFuncionFlecha(3,7);  // asignamos el valor a una variable
+console.log(resultado)
 
-function sumatodo(){
+// 1.7 Argumentos y parámetros
+let sumar = function(a = 4, b = 8){
+    console.log(arguments[0]);  // muestra el parametro de a
+    console.log(arguments[1]);  // muestra el parametro de b
+    return a + b + arguments[2];
+}
+resultado = sumar(3,2,9);
+console.log(resultado);
+
+// 1.8 Concepto hoisting
+// sumar todos los argumentos
+let respuesta = sumarTodo(5,4,13,10,9);
+console.log(respuesta);
+function sumarTodo(){
     let suma = 0;
-    for (let i=0; i<= arguments.length; i++){
-        suma += arguments[i];
+    for(let i = 0; i < arguments.length; i ++){
+        suma += arguments[i];  //arguments es para arreglos
     }
     return suma;
 }
 
-//paso por valor
-let valor = 10;
-function cambiarValor(a){
-    a = 20;
+// 1.9 Paso por valor
+// Tipos primitivos
+let x = 10;
+function cambiarValor(a){  // paso por valor
+    a = 20;                // solo afecta a la funcion, de forma interna
 }
-console.log(cambiarValor(valor));
+cambiarValor(k);
+console.log(k);
 
-//paso por referencia
-const personas = {
-    per1: "zelada",
-    perd2: "uwu"
+// 1.9.1 Paso por referencia
+
+const persona = {
+    nombre: 'Juan',
+    apellido: 'Lepez'
 }
-let cambioValor = (per) =>{
-    per.per1 = "uwu"
-    per.perd2 = "OWO"
+function cambiarValorObjeto(p1){
+    p1.nombre = 'Ignacio';
+    p1.apellido = 'Perez';
 }
-console.log(cambioValor(personas));
+
+cambiarValorObjeto(persona)
+console.log(persona)
