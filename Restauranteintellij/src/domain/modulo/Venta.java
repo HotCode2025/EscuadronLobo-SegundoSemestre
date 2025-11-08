@@ -1,7 +1,7 @@
 package domain.modulo;
 
 import java.util.Date;
-import java.util.List;
+import java.util.List;s
 
 public class Venta {
     private int id;
