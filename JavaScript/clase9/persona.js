@@ -1,39 +1,46 @@
-class Persona{
-    //metodo static
-    static contadorPersona = 0;
+class Persona{ //Creación de la Clase Persona
 
-    constructor (nombre, apellido, edad){
-        this._nombre    = nombre;
-        this._apellido  = apellido;
-        this._edad      = edad;
-        this._idPersona = ++Persona.contadorPersona;
+    static contadorPersonas = 0; //atributo static
+
+    constructor(nombre, apellido, edad){ //construc persona
+        this._idPersona = ++Persona.contadorPersonas;
+        this._nombre = nombre;
+        this._apellido = apellido;
+        this._edad = edad;
     }
 
-    //metodos get y set
+    //set and getter
+
     get idPersona(){
         return this._idPersona;
     }
+
     get nombre(){
-        return this._nombre;
+        this._nombre;
     }
+
     set nombre(nombre){
         this._nombre = nombre;
     }
+
     get apellido(){
         return this._apellido;
     }
+
     set apellido(apellido){
         this._apellido = apellido;
     }
+
     get edad(){
         return this._edad;
     }
+
     set edad(edad){
         this._edad = edad;
     }
 
-    //metodos toString
     toString(){
-        return "ID: "+this._idPersona +" = " + this._nombre + this._apellido + this._edad
+        return this._idPersona+"  "+this._nombre+" "+this._apellido+" "+this._edad;
     }
+    
 }

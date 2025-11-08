@@ -1,29 +1,26 @@
-class Empleado extends Persona{
+class Empleado extends Persona{ //Creación de la Clase Empleado
 
-    static contadorEmpleados = 0;
+    static contadorEmpleado = 0;
 
     constructor(nombre, apellido, edad, sueldo){
-        //impor class Persona
         super(nombre, apellido, edad);
-
-        this._idEmpleado = ++contadorEmpleados;
-        this._sueldo     = sueldo;
+        this._idEmpleado = ++Empleado.contadorEmpleado;
+        this._sueldo = sueldo;
     }
-    //metodos get and set
-    get idEmpleado(){
+
+    get _idEmpleado(){
         return this._idEmpleado;
     }
 
     get sueldo(){
-        return this._sueldo;
+        this._sueldo;
     }
+
     set sueldo(sueldo){
         this._sueldo = sueldo;
     }
 
-    //tostring
     toString(){
-        return super.toString() + " " + this.idEmpleado + " " + this._sueldo;
+        return super.toString()+" "+this._idEmpleado+" "+this._sueldo;
     }
-
 }
