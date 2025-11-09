@@ -8,7 +8,7 @@ public class GestionFacturacion {
     private static int contadorFacturas = 1;
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    // 🔹 Generar facturas para todos los pedidos listos
+    // Generar facturas para todos los pedidos listos
     public static void generarFacturasPedidosListos() {
         // Filtrar los pedidos que están listos para facturar
         List<Pedido> pedidosListos = PrecargaDatos.pedidos.stream()
@@ -18,32 +18,32 @@ public class GestionFacturacion {
         if (pedidosListos.isEmpty()) {
             System.out.println("⚠️ No hay pedidos listos para facturar.");
             return;
+        } else {
+            System.out.println("\n🧾 GENERANDO FACTURAS PARA PEDIDOS LISTOS\n");
+            for (Pedido pedido : pedidosListos) {
+                // Calcular total de la factura
+                double total = pedido.getPlatos().stream()
+                        .mapToDouble(Plato::getPrecio)
+                        .sum();
+
+                // Crear factura
+                Factura factura = new Factura(contadorFacturas++, pedido.getCliente(), pedido.getPlatos(), total, new Date());
+                facturas.add(factura);
+
+                // Marcar pedido como entregado
+                pedido.setEstado("entregado");
+
+                // Mostrar factura
+                System.out.printf("✅ Factura generada para pedido ID %d (Cliente: %s)%n", pedido.getId(), pedido.getCliente());
+                System.out.println(factura);
+                System.out.println("--------------------------------------------------");
+            }
+
+            System.out.printf("📌 Total de facturas generadas: %d%n", pedidosListos.size());
         }
-
-        System.out.println("\n🧾 GENERANDO FACTURAS PARA PEDIDOS LISTOS\n");
-        for (Pedido pedido : pedidosListos) {
-            // Calcular total de la factura
-            double total = pedido.getPlatos().stream()
-                    .mapToDouble(Plato::getPrecio)
-                    .sum();
-
-            // Crear factura
-            Factura factura = new Factura(contadorFacturas++, pedido.getCliente(), pedido.getPlatos(), total, new Date());
-            facturas.add(factura);
-
-            // Marcar pedido como entregado
-            pedido.setEstado("entregado");
-
-            // Mostrar factura
-            System.out.printf("✅ Factura generada para pedido ID %d (Cliente: %s)%n", pedido.getId(), pedido.getCliente());
-            System.out.println(factura);
-            System.out.println("--------------------------------------------------");
-        }
-
-        System.out.printf("📌 Total de facturas generadas: %d%n", pedidosListos.size());
     }
 
-    // 🔹 Consultar todas las facturas
+    // Consultar todas las facturas
     public static void consultarFacturas() {
         if (facturas.isEmpty()) {
             System.out.println("❌ No hay facturas generadas.");
@@ -67,7 +67,7 @@ public class GestionFacturacion {
         System.out.printf("📌 Total de facturas: %d%n", facturas.size());
     }
 
-    // 🔹 Anular todas las facturas
+    // Anular todas las facturas
     public static void anularTodasFacturas() {
         if (facturas.isEmpty()) {
             System.out.println("❌ No hay facturas para anular.");
@@ -79,7 +79,7 @@ public class GestionFacturacion {
         System.out.println("✅ Todas las facturas han sido anuladas correctamente.");
     }
 
-    // 🔹 Obtener facturas (getter)
+    // Obtener facturas (getter)
     public static List<Factura> getFacturas() {
         return facturas;
     }

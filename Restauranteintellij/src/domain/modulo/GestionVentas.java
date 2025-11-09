@@ -12,7 +12,7 @@ public class GestionVentas {
     private static final Scanner scanner = new Scanner(System.in);
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    // 🔹 Consultar ventas del día actual
+    // Consultar ventas del día actual
     public static void ventasDelDia() {
         Date hoy = new Date();
         System.out.println("\n🗓️ VENTAS DEL DÍA (" + sdf.format(hoy) + ")\n");
@@ -32,7 +32,7 @@ public class GestionVentas {
         }
     }
 
-    // 🔹 Consultar ventas por fecha ingresada
+    // Consultar ventas por fecha ingresada
     public static void ventasPorFecha() {
         try {
             System.out.print("Ingrese la fecha (dd/MM/yyyy): ");
@@ -58,7 +58,7 @@ public class GestionVentas {
         }
     }
 
-    // 🔹 Consultar ventas por cliente
+    // Consultar ventas por cliente
     public static void ventasPorCliente() {
         System.out.print("Ingrese el nombre del cliente: ");
         String cliente = scanner.nextLine();
@@ -82,7 +82,7 @@ public class GestionVentas {
     }
 
 
-    // 🔸 Método auxiliar para mostrar ventas
+    // Metodo auxiliar para mostrar ventas
     private static void mostrarVentas(List<Venta> lista) {
         if (lista.isEmpty()) {
             System.out.println("❌ No hay ventas registradas para esta consulta.");
@@ -98,7 +98,7 @@ public class GestionVentas {
         }
     }
 
-    // 🔸 Verifica si dos fechas son del mismo día
+    // Verifica si dos fechas son del mismo día
     private static boolean mismoDia(Date fecha1, Date fecha2) {
         Calendar c1 = Calendar.getInstance();
         Calendar c2 = Calendar.getInstance();
@@ -108,7 +108,7 @@ public class GestionVentas {
                 && c1.get(Calendar.DAY_OF_YEAR) == c2.get(Calendar.DAY_OF_YEAR);
     }
 
-    // 🔹 Contar efectivo (simulación)
+    // Contar efectivo (simulación)
     public static void contarEfectivo() {
         double totalEfectivo = PrecargaDatos.ventas.stream()
                 .mapToDouble(Venta::getTotal)
@@ -119,7 +119,7 @@ public class GestionVentas {
         System.out.println("Nota: Este valor simula el efectivo acumulado por todas las ventas.");
     }
 
-    // 🔹 Generar reporte de cierre
+    // Generar reporte de cierre
     public static void generarReporte() {
         Date hoy = new Date();
         List<Venta> ventasHoy = PrecargaDatos.ventas.stream()
@@ -216,7 +216,7 @@ public class GestionVentas {
             System.out.println("⚠️ No tiene pedidos pendientes o listos para pagar.");
             return;
         }
-
+        // calcula el total de la venta
         double total = pedidoCliente.getPlatos().stream()
                 .mapToDouble(Plato::getPrecio)
                 .sum();
@@ -224,6 +224,7 @@ public class GestionVentas {
         System.out.println("Monto total a pagar: $" + total);
         System.out.println("Saldo disponible: $" + cliente.getSaldo());
 
+        // Valida si el cliente tiene saldo
         if (cliente.getSaldo() < total) {
             System.out.println("❌ No tiene saldo suficiente para realizar el pago.");
             return;

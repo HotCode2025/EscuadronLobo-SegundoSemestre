@@ -1,4 +1,4 @@
-// domain/menus/MenuCliente.java
+//MenuCliente.java
 package domain.menus;
 
 import domain.modulo.GestionMenu;

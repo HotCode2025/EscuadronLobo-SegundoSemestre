@@ -4,22 +4,25 @@ import java.util.Date;
 import java.util.List;
 
 public class Venta {
-    private int id;
+    private int idVenta;
     private String cliente;
     private double total;
     private Date fecha;
     private List<Plato> platos;
+    private static int contadorVentas;
 
-    public Venta(int id, String cliente, double total, Date fecha, List<Plato> platos) {
-        this.id = id;
+    public Venta(){
+        this.idVenta = ++Venta.contadorVentas;
+    }
+    public Venta(int i, String cliente, double total, Date fecha, List<Plato> platos) {
+        this();
         this.cliente = cliente;
         this.total = total;
         this.fecha = fecha;
         this.platos = platos;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public int getId() { return idVenta; }
 
     public String getCliente() { return cliente; }
     public void setCliente(String cliente) { this.cliente = cliente; }
@@ -35,6 +38,6 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta " + id + " - Cliente: " + cliente + " - Total: $" + total + " - Fecha: " + fecha;
+        return "Venta " + idVenta + " - Cliente: " + cliente + " - Total: $" + total + " - Fecha: " + fecha;
     }
 }

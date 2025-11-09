@@ -1,4 +1,4 @@
-// domain/menus/MenuCajero.java
+//MenuCajero.java
 package domain.menus;
 import domain.modulo.GestionPedidos;
 import domain.modulo.GestionFacturacion;
