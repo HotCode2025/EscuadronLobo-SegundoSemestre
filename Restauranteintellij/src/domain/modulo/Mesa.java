@@ -11,14 +11,29 @@ public class Mesa {
         this.mozoAsignado = mozoAsignado;
     }
 
-    public int getNumero() { return numero; }
-    public void setNumero(int numero) { this.numero = numero; }
+    public int getNumero() {
+        return numero;
+    }
 
-    public String getEstado() { return estado; }
-    public void setEstado(String estado) { this.estado = estado; }
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
-    public String getMozoAsignado() { return mozoAsignado; }
-    public void setMozoAsignado(String mozoAsignado) { this.mozoAsignado = mozoAsignado; }
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getMozoAsignado() {
+        return mozoAsignado;
+    }
+
+    public void setMozoAsignado(String mozoAsignado) {
+        this.mozoAsignado = mozoAsignado;
+    }
 
     @Override
     public String toString() {
