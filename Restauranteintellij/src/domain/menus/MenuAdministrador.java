@@ -111,7 +111,7 @@ public class MenuAdministrador {
                 case 3 -> GestionMenu.modificarPlato();
                 case 4 -> GestionMenu.eliminarPlato();
                 case 5 -> GestionMenu.buscarPlato();
-                case 0 -> System.out.println("↩ Volviendo al menú principal...");
+                case 0 -> System.out.println("↩ Volviendo al menú principal....");
                 default -> System.out.println("❌ Opción no válida.");
             }
         } while (opcion != 0);
