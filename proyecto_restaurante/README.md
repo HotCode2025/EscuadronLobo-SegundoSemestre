@@ -153,9 +153,9 @@ El sistema incluye datos de prueba para facilitar las pruebas:
 **Usuarios:**
 - Admin: `admin` / `1234`
 - Mozo: `mozo1` / `mozo123`
-- Cocinero: `cocinero1` / `cocina123`
+- Cocinero: `cocina1` / `cocina123`
 - Cajero: `cajero1` / `caja123`
-- Repartidor: `repartidor1` / `reparto123`
+- Repartidor: `reparto1` / `reparto123`
 - Cliente: `cliente1` / `cliente123`
 
 ### Flujo de Trabajo Típico
