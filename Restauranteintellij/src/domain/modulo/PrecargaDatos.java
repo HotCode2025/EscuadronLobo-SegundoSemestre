@@ -43,8 +43,8 @@ public class PrecargaDatos {
 
     private static void precargarMesas() {
         mesas.add(new Mesa(1, "libre", "mozo1"));
-        mesas.add(new Mesa(2, "ocupada", "mozo1"));
-        mesas.add(new Mesa(3, "libre", "mozo1"));
+        mesas.add(new Mesa(2, "Ocupada", "mozo1"));
+        mesas.add(new Mesa(3, "Libre", "mozo1"));
     }
 
     private static void precargarMenu() {
