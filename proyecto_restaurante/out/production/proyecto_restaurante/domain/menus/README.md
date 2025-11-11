@@ -1,6 +1,3 @@
-<img width="1536" height="856" alt="20251104_2318_Logo Restaurante Lobo_simple_compose_01k98wts0qe739y6yv6spn9zv51" src="https://github.com/user-attachments/assets/7319de4b-5de3-46e1-bd69-7507ab8750c2" />
-
-
 # Sistema de Gestión de Restaurante
 
 Sistema integral de gestión de restaurante desarrollado en Java puro, que permite administrar usuarios, pedidos, menú, inventario, ventas y mesas a través de una interfaz de consola interactiva.

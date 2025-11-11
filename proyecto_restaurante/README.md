@@ -148,7 +148,7 @@ java -cp out test.RestauranteApp
 El sistema incluye datos de prueba para facilitar las pruebas:
 
 **Usuarios:**
-- Admin: `admin` / `admin123`
+- Admin: `admin` / `1234`
 - Mozo: `mozo1` / `mozo123`
 - Cocinero: `cocinero1` / `cocina123`
 - Cajero: `cajero1` / `caja123`
