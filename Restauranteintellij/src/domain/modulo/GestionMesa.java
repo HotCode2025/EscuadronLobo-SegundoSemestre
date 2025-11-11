@@ -18,7 +18,7 @@ public class GestionMesa {
             return;
         }
 
-        System.out.println("\n📋 LISTADO DE MESAS:");
+        System.out.println("\n📋 LISTA DE MESAS:");
         System.out.printf("%-6s %-15s %-20s%n", "N°", "Estado", "Mozo Asignado");
         System.out.println("--------------------------------------------------");
 
