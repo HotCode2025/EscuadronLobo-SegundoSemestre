@@ -1,3 +1,6 @@
+<img width="1536" height="856" alt="20251104_2318_Logo Restaurante Lobo_simple_compose_01k98wts0qe739y6yv6spn9zv51" src="https://github.com/user-attachments/assets/43c863c0-e8ca-499a-9775-b87aa38acb98" />
+
+
 # Sistema de Gestión de Restaurante
 
 Sistema integral de gestión de restaurante desarrollado en Java puro, que permite administrar usuarios, pedidos, menú, inventario, ventas y mesas a través de una interfaz de consola interactiva.
@@ -116,7 +119,7 @@ proyecto_restaurante/
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/proyecto_restaurante.git
+git clone https://github.com/HotCode2025/EscuadronLobo-SegundoSemestre.git
 cd proyecto_restaurante
 ```
 
