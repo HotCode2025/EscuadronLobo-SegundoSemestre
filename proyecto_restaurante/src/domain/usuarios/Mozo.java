@@ -1,13 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package domain.usuarios;
 
-/**
- *
- * @author MATIAS-INFORMATICA
- */
-public class Mozo {
-    
+public class Mozo extends Empleado {
+
+    public Mozo(String nombre, String dni, String usuario, String contrasena, String sucursal) {
+        super(nombre, dni, usuario, contrasena, sucursal, "Mozo");
+    }
+
+    public void tomarPedido(String mesa) {
+        System.out.println(getNombre() + " tomó el pedido de la mesa " + mesa);
+    }
+
+    public void entregarPedidoMesa(String mesa) {
+        System.out.println(getNombre() + " entregó el pedido en la mesa " + mesa);
+    }
+
+    @Override
+    public String toString() {
+        return "Mozo{" +
+                "nombre='" + getNombre() + '\'' +
+                ", sucursal='" + getSucursal() + '\'' +
+                '}';
+    }
 }
